@@ -33,6 +33,7 @@ h1 {
 .services h2 {
     color: #0099cc;
     font-size: 28px;
+    padding-left: 50px;
 }
 
 .services ul {
