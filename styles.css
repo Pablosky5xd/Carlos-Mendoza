@@ -36,13 +36,23 @@ h1 {
 }
 
 .services ul {
-    list-style-type: none;
+    list-style-type: none; /* Elimina los puntos de la lista */
     padding: 0;
+    margin: 0;
+    font-size: 18px; /* Tamaño de fuente adecuado */
 }
 
 .services li {
-    font-size: 18px;
-    margin: 8px 0;
+    margin: 8px 0; /* Espaciado entre los elementos de la lista */
+    padding-left: 20px; /* Añade un poco de espacio a la izquierda para los items */
+    position: relative; /* Para el icono de la lista */
+}
+.services li::before {
+    content: "✔"; /* Puedes cambiar el icono a algo que prefieras */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #0099cc; /* Color para los iconos */
 }
 
 .cta {
@@ -80,8 +90,8 @@ button:hover {
 }
 
 .flyer-image {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
+    height: auto; /* Mantiene la proporción original de la imagen */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -162,3 +172,79 @@ button:hover {
 footer {
     text-align: center;
 }
+
+/* Respuestas responsivas para dispositivos pequeños */
+@media (max-width: 768px) {
+
+    /* Ajustes para el contenedor principal */
+    .flyer-container {
+        width: 100%;
+        padding: 20px; /* Agrega un poco de espaciado */
+    }
+
+    /* Ajustes para el título */
+    h1 {
+        font-size: 28px;
+    }
+
+    /* Ajustes para la imagen */
+    .image-section {
+        margin-top: -150px; /* Ajusta la posición de la imagen para que no se solape demasiado */
+    }
+
+    .flyer-image {
+        width: 100%; /* Asegura que la imagen se ajuste al ancho de la pantalla */
+        max-width: 100%; /* No se sobrepasa del ancho de la pantalla */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+
+    /* Ajustes para los servicios */
+    .services h2 {
+        font-size: 24px;
+    }
+
+    .services li {
+        font-size: 16px; /* Reducir el tamaño de la fuente en dispositivos móviles */
+    }
+
+    /* Ajustes para la llamada a la acción (CTA) */
+    .cta-message {
+        font-size: 18px;
+    }
+
+    /* Ajustes para el botón */
+    button {
+        font-size: 16px;
+        padding: 10px 25px;
+    }
+
+    /* Información de contacto en columna */
+    .contact-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-image {
+        max-width: 200px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .number-box {
+        width: 90%; /* Asegura que los cuadros de números no se desborden */
+        font-size: 16px; /* Reduce el tamaño de la fuente */
+    }
+
+    /* Redes sociales en columna */
+    .social-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Ajustes del footer */
+    footer {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+}
+
