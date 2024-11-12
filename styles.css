@@ -94,7 +94,7 @@ button:hover {
     max-width: 100%; /* Hace que la imagen ocupe el 100% del contenedor */
     height: auto; /* Mantiene la proporción */
     margin-top: 20px; /* Ajustamos la separación superior */
-
+}
 
 /* Página de contacto */
 .contact-info {
@@ -243,8 +243,8 @@ footer {
 
     /* Ajustes del footer */
     footer {
+        padding: 20px;
         font-size: 14px;
         margin-top: 20px;
     }
 }
-
